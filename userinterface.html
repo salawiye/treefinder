@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+	<html>
+		<body>
+					<head>
+					<link rel="stylesheet" href="trees.css">
+		 			</head>
+				<h1 id="title">Street Trees of Toronto</h1>
+				<img src="file:///Users/sufian.alawiye/Downloads/1.jpg" alt="Tree bingo">
+				<h2 id="">Pick a number and find out what type of tree it is!</h2>
+			<button onclick="tree_selective()">click</button>
+			<input id='Input'>
+			<script>
+				var trees =[
+				{
+					id: "0",
+					commonname: "Red Oak",
+					scientificname: "Quercus rubra" 
+				},
+				{
+					id: "1",
+					commonname: "Silver Maple",
+					scientificname: "Acer saccharinum"
+				},
+				{
+					id: "2",
+					commonname: "Sugar Maple",
+					scientificname: "Acer saccharum"
+				},
+				{
+					id: "3", 
+					commonname: "Ginko",
+					scientificname: "Ginko biloba"
+				},
+				{
+					id: "4", 
+					commonname: "London Planetree",
+					scientificname: "Plantanus x acerifolia"
+				},
+				{
+					id: "5",
+					commonname: "Norway Maple",
+					scientificname: "Acer platanoides"
+				},
+				{
+					id: "6",
+					commonname: "Tulip Tree",
+					scientificname: "Liriodendron tulipifera"
+				},
+				{
+					id: "7", 
+					commonname: "White Oak",
+					scientificname: "Quercus alba"
+				},
+				{
+					id: "8", 
+					commonname: "White Pine",
+					scientificname: "Pinus strobus"
+				},
+				{
+					id: "9",
+					commonname: "Black Walnut",
+					scientificname: "Juglans nigra"
+				},
+				{
+					id: "10",
+					commonname: "Saucer Magnolia",
+					scientificname: "Magnolia x soulangeana"
+				},
+				{
+					id: "11",
+					commonname: "Horsechestnut",
+					scientificname: "Aesculus hippocastanum"
+				}
+			];
+				function tree_selective()
+				{
+					console.log("gothere")
+					tree_chosen=document.getElementById('Input').value;
+					for (i=0; i < trees.length; i++){
+						console.log(tree_chosen)
+						if(trees[i].id==tree_chosen){
+							document.getElementById("found_tree").innerHTML = "The tree is: " + trees[i].commonname + ", "+ trees[i].scientificname + "!";
+							console.log(trees[i].commonname)
+						}
+					}
+				}
+			</script>
+		<h3 id = "found_tree">
+		</div>
+		</body>
+	</html>
+  
+
